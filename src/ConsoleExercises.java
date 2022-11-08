@@ -27,7 +27,6 @@ public class ConsoleExercises {
         String sentence = scanner.nextLine();
         System.out.println(sentence);
 
-
         // Area Calculator
         System.out.println("Enter your classroom's length & width & height:  ");
         float length = scanner.nextInt();
@@ -38,12 +37,11 @@ public class ConsoleExercises {
         scanner.nextLine();
 
         // Perimeter Calculator
-        float perimeter = area * 2;
+        float perimeter = (length + width) * 2;
         System.out.println("Your perimeter is " + perimeter);
 
         // Volume Calculator
         float volume = length * width * height;
         System.out.println("Your volume is " + volume);
-
     }
 }
