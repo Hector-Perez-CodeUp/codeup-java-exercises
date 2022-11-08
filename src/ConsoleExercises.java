@@ -8,33 +8,34 @@ public class ConsoleExercises {
         System.out.printf("The value of pi is approximately %.2f.", pi);
 
         // Prompt User for Integer
-        Scanner scannerInt = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an integer:  ");
-        int userInput = scannerInt.nextInt();
+        int userInput = scanner.nextInt();
         System.out.println("You entered: --> \"" + userInput + "\" <--");
+        scanner.nextLine();
 
         // Three Words
-        Scanner scannerWords = new Scanner(System.in);
         System.out.println("Enter three words:  ");
-        String firstWord = scannerWords.next();
-        String secondWord = scannerWords.next();
-        String thirdWord = scannerWords.next();
+        String firstWord = scanner.next();
+        String secondWord = scanner.next();
+        String thirdWord = scanner.next();
         System.out.println(firstWord + "\n" + secondWord + "\n" + thirdWord);
-//
+        scanner.nextLine();
+
         // Sentence
         System.out.println("Enter a sentence:  ");
-        Scanner scannerSentence = new Scanner(System.in);
-        String sentence = scannerSentence.nextLine();
+        String sentence = scanner.nextLine();
         System.out.println(sentence);
 
+
         // Area Calculator
-        Scanner lengthWidthHeightScanner = new Scanner(System.in).useDelimiter("\\s");
         System.out.println("Enter your classroom's length & width & height:  ");
-        float length = lengthWidthHeightScanner.nextInt();
-        float width = lengthWidthHeightScanner.nextInt();
-        float height = lengthWidthHeightScanner.nextInt();
+        float length = scanner.nextInt();
+        float width = scanner.nextInt();
+        float height = scanner.nextInt();
         float area = length * width;
         System.out.println("Your area is: " + area);
+        scanner.nextLine();
 
         // Perimeter Calculator
         float perimeter = area * 2;
@@ -43,11 +44,6 @@ public class ConsoleExercises {
         // Volume Calculator
         float volume = length * width * height;
         System.out.println("Your volume is " + volume);
-
-
-
-//        System.out.println(lengthAndWidth);
-//        int length = Integer.parseInt(lengthAndWidth);
 
     }
 }
