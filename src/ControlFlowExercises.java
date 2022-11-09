@@ -4,47 +4,64 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String args[])
     {
-//        // a
-//        for(int i = 5; i <= 15; i++) {
-//            System.out.println(i);
-//        }
-//
-//        // b
-//        for(int i = 100; i >= -10; i-=5) {
-//            System.out.println(i);
-//        }
-//
-//        // c
-//        for(long i = 2; i < 1000000; i*=i) {
-//            System.out.println(i);
-//        }
-//
-//        // 2.
-//        for(int i = 1; i <=100; i++) {
-//            if (i % 3 == 0 && i % 5 == 0 ) {
-//                System.out.println("FizzBuzz");
-//            }
-//            else if(i % 5== 0) {
-//                System.out.println("Buzz");
-//            }
-//            else if (i % 3 == 0) {
-//                System.out.println("Fizz");
-//            } else {
-//                System.out.println(i);
-//            }
-//        }
+        // a
+        for(int i = 5; i <= 15; i++) {
+            System.out.println(i);
+        }
+
+        // b
+        for(int i = 100; i >= -10; i-=5) {
+            System.out.println(i);
+        }
+
+        // c
+        for(long i = 2; i < 1000000; i*=i) {
+            System.out.println(i);
+        }
+
+        // 2.
+        for(int i = 1; i <=100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            }
+            else if(i % 5 == 0) {
+                System.out.println("Buzz");
+            }
+            else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else {
+                System.out.println(i);
+            }
+        }
 
         // 3.
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What number would you like to go up to?  ");
-        int userNum = scanner.nextInt();
 
-        System.out.println("number | squared  | cubed");
-        System.out.println("------ | -------- | -----");
+        boolean keepGoing = true;
+        while (keepGoing) {
+            System.out.println("What number would you like to go up to?  ");
+            int userNum = scanner.nextInt();
 
-        for (int i = 1; i <= userNum; i++) {
-            System.out.println(i + "\t   |  " + i*i + "\t  |  " + i*i*i);
-    }
+            System.out.println("number | squared  | cubed");
+            System.out.println("------ | -------- | -----");
+
+            for (int i = 1; i <= userNum; i++) {
+                System.out.println(i + "\t   |  " + i*i + "\t  |  " + i*i*i);
+            }
+            System.out.println("Try another number? [y / n]");
+            String test = scanner.nextLine();
+            String tryNewNum = scanner.nextLine();
+
+            if (tryNewNum.equalsIgnoreCase("y")) {
+                keepGoing = true;
+            } else {
+                System.out.println("Goodbye");
+                keepGoing = false;
+            }
+        }
+
+
+
 
         // 4.
         boolean anotherGrade = true;
@@ -74,8 +91,5 @@ public class ControlFlowExercises {
                 anotherGrade = false;
             }
         }
-
-
-//
     }
 }
