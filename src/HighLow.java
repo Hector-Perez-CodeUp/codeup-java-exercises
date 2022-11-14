@@ -7,23 +7,24 @@ public class HighLow {
         int randomNum = ((int)Math.floor(Math.random()*(100-1+1)+1));
         int guessCount = 0;
 
-        while (guessCount < 3) {
+        while (guessCount <= 2) {
             Scanner sc = new Scanner(System.in);
             System.out.println("Guess a number between 1 - 100:  ");
             int userGuess = sc.nextInt();
 
-            if (guessCount == 0) {
-                System.out.println("Sorry, the random number was " + randomNum);
-            } else if (userGuess < randomNum) {
+            if (userGuess < randomNum) {
                 System.out.println("HIGHER");
                 guessCount += 1;
-                System.out.println("You have " + (3 - guessCount) + " guesses left.");
+                System.out.println((guessCount == 2) ? "You have " + (3 - guessCount) + " guess left." : "You have " + (3 - guessCount) + " guesses left.");
             } else if (userGuess > randomNum) {
                 System.out.println("LOWER");
                 guessCount += 1;
+                System.out.println((guessCount == 2) ? "You have " + (3 - guessCount) + " guess left." : "You have " + (3 - guessCount) + " guesses left.");
             } else {
                 System.out.println("GOOD GUESS!");
+                break;
             }
         }
+        System.out.println("Sorry, the random number was:  " + randomNum);
     }
 }
