@@ -4,17 +4,17 @@ public class MethodsExercises {
     public static void main (String[] args) {
 
         // 1.
-        addition(6, 3);
-        subtraction(6, 3);
-        multiplication(6, 3);
-        division(6, 3);
-        modulus(6, 3);
-
-        // 2.
-        getInteger(1, 10);
+//        addition(6, 3);
+//        subtraction(6, 3);
+//        multiplication(6, 3);
+//        division(6, 3);
+//        modulus(6, 3);
+//
+//        // 2.
+//        getInteger(1, 10);
 
         // 3.
-//        getFactorial();
+        getFactorial();
 
         // 4.
         rollDice();
@@ -63,22 +63,25 @@ public class MethodsExercises {
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter a number between 1 and 10:  ");
             int userNum = sc.nextInt();
-            for (int i = 1; i >= userNum; i--) {
-                System.out.println(i);
-            }
-            System.out.println(userNum + "! = ");
+            if (userNum >= 1 && userNum <= 10) {
+                int iterations = 1;
+                for (int i = 1; i <= userNum; i++) {
+                    iterations *= i;
+                }
+                System.out.println(userNum + "! = " + iterations);
 
-            System.out.println("Would you like to continue? [y/n]");
-            String yesOrNo = sc.nextLine();
-            if (yesOrNo.equalsIgnoreCase("y")) {
-                System.out.println("if");
-                keepGoing = true;
+                System.out.println("Would you like to continue? [y/n]");
+                String yesOrNo = sc.next();
+                if (yesOrNo.equalsIgnoreCase("y")) {
+                    keepGoing = true;
+                } else {
+                    System.out.println("Done");
+                    break;
+                }
             } else {
-                System.out.println("else");
-                keepGoing = false;
+                getFactorial();
             }
         }
-
     }
 
     // 4.
