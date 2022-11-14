@@ -14,7 +14,7 @@ public class MethodsExercises {
 //        getInteger(1, 10);
 
         // 3.
-        getFactorial();
+//        getFactorial();
 
         // 4.
         rollDice();
@@ -94,12 +94,13 @@ public class MethodsExercises {
         String rollDice = sc.next();
 
         if (rollDice.equalsIgnoreCase("y")) {
-            System.out.println("You rolled a " + ((int)Math.floor(Math.random()*(sidesOfDice-1+1)+1)) + " and a " + ((int)Math.floor(Math.random()*(sidesOfDice-1+1)+1)));
+            System.out.println("You rolled a " + getRandom(sidesOfDice) + " and a " + getRandom(sidesOfDice));
         } else {
             System.out.println("Okay goodbye!");
         }
     }
 
-    // 5.
-
+    public static int getRandom(int num) {
+        return ((int)Math.floor(Math.random()*(num-1+1)+1));
+    }
 }
