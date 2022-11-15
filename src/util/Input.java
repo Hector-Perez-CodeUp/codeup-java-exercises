@@ -39,8 +39,9 @@ public class Input {
         if (userNum >= min && userNum <= max) {
             return userNum;
         } else {
-            System.out.println("Invalid input. Enter a num between 1-10");
-            return min - 1;
+            System.out.println("Invalid input.");
+            getInt(min, max);
+            return 0;
         }
     }
 
@@ -54,8 +55,13 @@ public class Input {
     public double getDouble(double min, double max) {
         System.out.println("\nEnter an double between 1 - 10");
         double userDouble = scanner.nextDouble();
-        System.out.println("Your integer is:");
-        return userDouble;
+        if (userDouble >= min && userDouble <= max) {
+            return userDouble;
+        } else {
+            System.out.println("Invalid input.");
+            getDouble(min, max);
+            return 0;
+        }
     }
 
     public double getDouble() {
