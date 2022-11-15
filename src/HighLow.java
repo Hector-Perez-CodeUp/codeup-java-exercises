@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class HighLow {
     public static void main(String[] args) {
         System.out.println("Welcome to the HighLow Game!\nYou have 3 tries to guess the randomly generated number.");

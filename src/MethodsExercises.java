@@ -4,17 +4,17 @@ public class MethodsExercises {
     public static void main (String[] args) {
 
         // 1.
-//        addition(6, 3);
-//        subtraction(6, 3);
-//        multiplication(6, 3);
-//        division(6, 3);
-//        modulus(6, 3);
-//
-//        // 2.
-//        getInteger(1, 10);
+        addition(6, 3);
+        subtraction(6, 3);
+        multiplication(6, 3);
+        division(6, 3);
+        modulus(6, 3);
+
+        // 2.
+        getInteger(1, 10);
 
         // 3.
-//        getFactorial();
+        getFactorial();
 
         // 4.
         rollDice();
@@ -48,7 +48,6 @@ public class MethodsExercises {
         System.out.print("Enter a number between 1 and 10:  ");
         int userInput = sc.nextInt();
         if (userInput >= min && userInput <= max) {
-            System.out.println("Done");
             return userInput;
         } else {
             getInteger(min, max);
@@ -61,7 +60,7 @@ public class MethodsExercises {
         boolean keepGoing = true;
         while (keepGoing){
             Scanner sc = new Scanner(System.in);
-            System.out.println("Enter a number between 1 and 10:  ");
+            System.out.println("Enter a number between 1 and 10 to get Factorial:  ");
             int userNum = sc.nextInt();
             if (userNum >= 1 && userNum <= 10) {
                 int iterations = 1;
