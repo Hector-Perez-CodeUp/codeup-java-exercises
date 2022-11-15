@@ -30,7 +30,7 @@ public class Input {
     public boolean yesNo() {
         System.out.println("\nEnter [y/n]");
         String userBool = scanner.next();
-        return userBool.equalsIgnoreCase("y");
+        return userBool.equalsIgnoreCase("y") || userBool.equalsIgnoreCase("yes");
     }
 
     public int getInt(int min, int max) {
