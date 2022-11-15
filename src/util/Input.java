@@ -16,8 +16,8 @@ public class Input {
     }
 
     // Constructor
-    public Input(Scanner scanner) {
-        this.scanner = scanner;
+    public Input(Scanner myScanner) {
+        this.scanner = myScanner;
     }
 
     public String getString() {
