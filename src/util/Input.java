@@ -23,7 +23,6 @@ public class Input {
     public String getString() {
         System.out.println("Enter a string");
         String userString = scanner.nextLine();
-        System.out.println("Your string is:");
         return userString;
     }
 
@@ -48,7 +47,6 @@ public class Input {
     public int getInt() {
         System.out.println("\nEnter an integer");
         int userInt = scanner.nextInt();
-        System.out.println("Your integer is:");
         return userInt;
     }
 
@@ -67,7 +65,6 @@ public class Input {
     public double getDouble() {
         System.out.println("Enter an number (double)");
         double userDouble = scanner.nextDouble();
-        System.out.println("Your double is:");
         return userDouble;
     }
 }
