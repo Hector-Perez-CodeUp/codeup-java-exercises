@@ -8,7 +8,6 @@ public class Movie {
         Movie myMovie = new Movie("Halloween", "Horror");
         System.out.println(myMovie.getName());
         System.out.println(myMovie.getCategory());
-
     }
 
     // Constructor

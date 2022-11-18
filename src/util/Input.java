@@ -14,6 +14,7 @@ public class Input {
         this.scanner = myScanner;
     }
 
+    // Getter
     public String getString() {
         System.out.println("Enter a string");
         return scanner.nextLine();
@@ -39,8 +40,7 @@ public class Input {
 
     public int getInt() {
         System.out.println("\nEnter an integer");
-        int userInt = scanner.nextInt();
-        return userInt;
+        return scanner.nextInt();
     }
 
     public double getDouble(double min, double max) {
@@ -57,7 +57,6 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Enter an number (double)");
-        double userDouble = scanner.nextDouble();
-        return userDouble;
+        return scanner.nextDouble();
     }
 }

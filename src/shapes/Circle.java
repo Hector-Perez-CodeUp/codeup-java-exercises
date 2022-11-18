@@ -26,7 +26,6 @@ public class Circle {
         System.out.println("The RADIUS of your circle is: ");
         return this.radius;
     }
-
     // Radius Setter
     public void setRadius(int newRadius) {
         this.radius = newRadius;
