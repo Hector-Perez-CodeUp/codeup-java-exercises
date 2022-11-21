@@ -1,7 +1,9 @@
+import java.util.HashMap;
 
-
-public class StudentTest {
+public class GradesApplication {
     public static void main(String[] args) {
+        HashMap<String, Student> students = new HashMap<>();
+
         Student lunaObj = new Student("Luna");
         lunaObj.addGrade(4);
         lunaObj.addGrade(6);
@@ -26,5 +28,12 @@ public class StudentTest {
         sylvieObj.addGrade(1);
         sylvieObj.addGrade(3);
         sylvieObj.addGrade(2);
+
+        students.put("looneyluna", lunaObj);
+        students.put("soggysokka", sokkaObj);
+        students.put("low_key", lokiObj);
+        students.put("yourhighnessmaggs", maggieObj);
+        students.put("thedum1", sylvieObj);
+        System.out.println(students);
     }
 }
