@@ -39,7 +39,7 @@ public class Input {
     }
 
     public int getInt() {
-        System.out.println("\nEnter an integer");
+        System.out.println("Enter an integer");
         return scanner.nextInt();
     }
 
