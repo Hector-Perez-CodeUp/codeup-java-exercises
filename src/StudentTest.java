@@ -2,11 +2,6 @@
 
 public class StudentTest {
     public static void main(String[] args) {
-        Student lunaObj = new Student("Luna");
-        lunaObj.addGrade(4);
-        lunaObj.addGrade(6);
-        lunaObj.addGrade(7);
-
         Student sokkaObj = new Student("Sokka");
         sokkaObj.addGrade(4);
         sokkaObj.addGrade(4);
