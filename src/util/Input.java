@@ -40,7 +40,9 @@ public class Input {
 
     public int getInt() {
         System.out.println("Enter an integer");
-        return scanner.nextInt();
+        int input = scanner.nextInt();
+        scanner.nextLine();
+        return input;
     }
 
     public double getDouble(double min, double max) {
